@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bem-estar Jovem - Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .logo {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .hidden { display: none; }
+    .error-message {
+      color: #d32f2f;
+      background-color: #f9dcdc;
+      border: 1px solid #d32f2f;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 8px;
+    }
+    .success-message {
+      color: #000000;
+      background-color: #d0f0d8;
+      border: 1px solid #000000;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 8px;
+    }
+
+    #cadastroBox, #loginBox {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <h1>Bem-vindo ao Bem-Estar Jovem!</h1>
+      <img src="img/logo.png" alt="Logo" class="logo" />
+      <p class="centralizado">Explore conteúdos sobre saúde mental e bem-estar</p>
+    </div>
+  </header>
+
+  <div class="box-texto">
+    <h2>Bem-Estar Jovem</h2>
+    <p>
+      O <strong>Bem-Estar Jovem</strong> é uma iniciativa inovadora voltada à promoção da saúde mental e do bem-estar emocional entre adolescentes e jovens adultos (10 a 19 anos). Reconhecemos que essa fase da vida é repleta de descobertas, desafios emocionais, pressões sociais e mudanças hormonais intensas — fatores que podem impactar diretamente a saúde mental. Nosso compromisso é oferecer um ambiente digital seguro, acolhedor e informativo, onde jovens possam encontrar apoio sem julgamentos.
+    </p>
+    <p>
+      Nossa plataforma é um hub completo de recursos para o autocuidado, incluindo artigos educacionais sobre temas como ansiedade, depressão e estresse escolar; quizzes interativos para autoavaliação; rotinas diárias personalizadas para diferentes transtornos; um diário emocional para registrar sentimentos; vídeos de meditação e relaxamento; dicas práticas de autocuidado; e um FAQ abrangente para esclarecer dúvidas comuns. Tudo isso é projetado para incentivar a reflexão, o diálogo interno e a busca por equilíbrio emocional, ajudando jovens a desenvolverem resiliência e habilidades de coping.
+    </p>
+    <p>
+      Os benefícios de usar nossa plataforma incluem: acesso gratuito a conteúdos baseados em evidências científicas da OMS e especialistas em psicologia; ferramentas práticas para gerenciar emoções no dia a dia; comunidade de apoio (através de compartilhamento anônimo); e recursos que promovem hábitos saudáveis, como exercícios físicos, meditação e alimentação balanceada. Estudos mostram que intervenções precoces em saúde mental podem reduzir em até 50% o risco de transtornos crônicos na vida adulta.
+    </p>
+    <p>
+      Acreditamos que investir em saúde mental é essencial para construir um futuro mais saudável, resiliente e humano. Seja bem-vindo à comunidade Bem-Estar Jovem — um espaço feito para você crescer, se entender e se fortalecer. Lembre-se: cuidar da mente é um ato de coragem e amor próprio. Comece hoje a jornada rumo ao seu bem-estar!
+    </p>
+  </div>
+
+  <div class="container">
+
+    <div class="box-texto" id="cadastroBox">
+      <h2>Cadastro</h2>
+      <div id="cadastroError" class="error-message hidden" role="alert" aria-live="assertive"></div>
+      <div id="cadastroSuccess" class="success-message hidden" role="alert" aria-live="assertive"></div>
+
+      <form id="cadastroForm" novalidate>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name" />
+
+        <label for="emailCadastro">E-mail:</label>
+        <input type="email" id="emailCadastro" name="email" required autocomplete="email" />
+
+        <label for="senhaCadastro">Senha:</label>
+        <input type="password" id="senhaCadastro" name="senha" required autocomplete="new-password" />
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="data_nascimento" required />
+
+        <div class="form-buttons" style="margin-top: 16px;">
+          <button type="button" onclick="cadastrar()">Cadastrar</button>
+          <button type="button" onclick="mostrarLogin()">Já tenho conta</button>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="box-texto hidden" id="loginBox">
+      <h2>Login</h2>
+      <div id="loginError" class="error-message hidden" role="alert" aria-live="assertive"></div>
+
+      <form id="loginForm" novalidate>
+        <label for="emailLogin">E-mail:</label>
+        <input type="email" id="emailLogin" name="email" required autocomplete="username" />
+
+        <label for="senhaLogin">Senha:</label>
+        <input type="password" id="senhaLogin" name="senha" required autocomplete="current-password" />
+
+        <div class="form-buttons" style="margin-top: 16px;">
+          <button type="button" onclick="logar()">Entrar</button>
+          <button type="button" onclick="mostrarCadastro()">Criar conta</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <button onclick="window.location.href='templates/admin-login.html'"
+      style="
+        background-color: #66bb6a; 
+        color: white; 
+        border: none; 
+        border-radius: 800px; 
+        padding: 12px 5px; 
+        font-weight: bold; 
+        cursor: pointer;
+        font-family: 'Courier New', monospace;
+        font-size: 18px;
+      ">
+      Admin
+    </button>
+  </div>
+
+  <footer>
+    &copy; 2025 Bem-Estar Jovem. Todos os direitos reservados.
+  </footer>
+
+  <script src="js/index.js"></script>
+
+</body>
+</html>

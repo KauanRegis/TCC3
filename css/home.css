@@ -1,0 +1,312 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: monospace;
+    background-color: #e8f5e9;
+    color: #000000;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #81c784; 
+    padding: 40px 20px;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 4px solid #a5d6a7;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #a5d6a7;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-bottom: 3px solid #81c784;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.box-texto {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: #000000;
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: justify;
+}
+
+section {
+    display: none;
+    margin-bottom: 50px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid #a5d6a7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.5s ease;
+    color: #000000;
+}
+
+/* Ajuste de tamanho para seções específicas */
+#quizes,
+#diario,
+#rotina,
+#videos,
+#dicas {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+
+#artigos {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    box-sizing: border-box;
+}
+section:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px) scale(1.03);
+    border: 3px solid #66bb6a;
+    background-color: #f8fdf8;
+}
+
+section.active {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #81c784;
+    color: #ffffff;
+    font-size: 0.9em;
+    border-top: 4px solid #a5d6a7;
+    margin-top: auto;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #a5d6a7;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 2px solid #ffffff;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 93%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.login-form input[type="submit"] {
+    width: 99%;
+    padding: 12px;
+    background-color: #81c784;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #66bb6a;
+}
+
+.top-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Efeitos de Hover para inputs de texto */
+.login-form input[type="text"]:hover,
+.login-form input[type="password"]:hover {
+    border: 2px solid #66bb6a;
+    background-color: #f0f8e1;
+    transition: all 0.3s ease;
+}
+
+/* Efeitos de Hover para a box de texto - Destaque Ampliado */
+.box-texto:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px) scale(1.03);
+    border: 3px solid #66bb6a;
+    background-color: #f8fdf8;
+    transition: all 0.4s ease;
+}
+
+/* Efeitos de Hover para artigos */
+.artigo-saude-mental {
+    transition: all 0.4s ease;
+}
+.artigo-saude-mental:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px) scale(1.03);
+    border: 3px solid #66bb6a;
+    background-color: #f8fdf8;
+}
+
+/* Efeitos de Hover para botões */
+button:hover {
+    background-color: #66bb6a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Animações adicionais */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+section.active {
+    display: block;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.artigo-saude-mental {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Header buttons */
+.header-button {
+    padding: 10px 15px;
+    background-color: #66bb6a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-button:hover {
+    background-color: #5aa85a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .content {
+        padding: 20px 10px;
+    }
+
+    .box-texto {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Admin - Bem-estar Jovem</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Login Admin</h1>
+    <p class="centralizado">Acesse a área administrativa</p>
+  </header>
+
+  <div class="container">
+    <div class="box-texto" id="loginBox">
+      <h2>Login</h2>
+      <form id="adminLoginForm">
+        <label for="adminEmail">E-mail:</label>
+        <input type="email" id="adminEmail" name="adminEmail" required autocomplete="username" />
+
+        <label for="adminSenha">Senha:</label>
+        <input type="password" id="adminSenha" name="adminSenha" required autocomplete="current-password" />
+
+        <div class="form-buttons" style="margin-top: 16px;">
+          <button type="button" onclick="loginAdmin()">Entrar</button>
+          <button type="button" onclick="window.location.href='home.html'">Voltar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Bem-Estar Jovem. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function loginAdmin() {
+      const email = document.getElementById('adminEmail').value.trim();
+      const senha = document.getElementById('adminSenha').value.trim();
+
+      const adminEmail = "kauan@gmail.com";
+      const adminSenha = "123";
+
+      if (email === adminEmail && senha === adminSenha) {
+        alert("Login admin bem-sucedido!");
+      
+        window.location.href = "admin.html";
+      } else {
+        alert("E-mail ou senha do admin incorretos!");
+      }
+    }
+  </script>
+
+</body>
+</html>
