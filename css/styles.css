@@ -3,7 +3,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: monospace;
+    font-family: Verdana;
     background-color: #e8f5e9;
     color: #000000;
     line-height: 1.6;
@@ -23,7 +23,7 @@ body {
 }
 
 header {
-    background-color: #81c784; 
+    background-color: #2a8770; 
     padding: 40px 20px;
     text-align: center;
     color: #ffffff;
@@ -147,7 +147,7 @@ input[type="date"] {
 .login-form input[type="submit"] {
     width: 99%;
     padding: 12px;
-    background-color: #81c784;
+    background-color: #38bb9b;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -157,7 +157,7 @@ input[type="date"] {
 }
 
 .login-form input[type="submit"]:hover {
-    background-color: #66bb6a;
+    background-color: #2e9b7f;
 }
 
 .top-link {
@@ -170,7 +170,7 @@ input[type="date"] {
 }
 
 button {
-    background-color: #81c784;
+    background-color: #38bb9b;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -181,7 +181,7 @@ button {
 }
 
 button:hover {
-    background-color: #66bb6a;
+    background-color: #2e9b7f;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
