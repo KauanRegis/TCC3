@@ -23,10 +23,11 @@ body {
 }
 
 header {
-    background-color: #2a8770; 
+    background-color: #2a8770;
     padding: 40px 20px;
     text-align: center;
     color: #ffffff;
+    font-family: Verdana;
     border-bottom: 4px solid #a5d6a7;
 }
 
@@ -115,10 +116,9 @@ section.active {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #81c784;
-    color: #ffffff;
+    background-color: #2a8770;
+    color: #000000;
     font-size: 0.9em;
-    border-top: 4px solid #a5d6a7;
     margin-top: auto;
 }
 

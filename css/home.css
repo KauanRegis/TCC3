@@ -104,11 +104,12 @@ button:active, .btn:active {
 }
 
 header {
-    background-color: #2a8770; 
+    background-color: #2a8770;
     padding: 40px 20px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     border-bottom: 4px solid #a5d6a7;
+    font-family: Verdana;
 }
 
 header h1 {
@@ -124,7 +125,7 @@ header p {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #79eed1;
+    background-color: #62b9a3;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 
@@ -193,6 +194,15 @@ section {
     margin-right: auto;
     padding: 50px;
     box-sizing: border-box;
+    border: none;
+    transition: none;
+}
+
+#artigos:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: none;
+    border: none;
+    background-color: #ffffff;
 }
 section:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
@@ -208,10 +218,9 @@ section.active {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #81c784;
+    background-color: #2a8770;
     color: #ffffff;
     font-size: 0.9em;
-    border-top: 4px solid #a5d6a7;
     margin-top: auto;
 }
 
@@ -261,7 +270,7 @@ footer {
 
 
 .logo {
-    max-width: 150px;
+    max-width: 210px;
     height: auto;
 }
 
