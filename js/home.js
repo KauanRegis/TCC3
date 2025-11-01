@@ -406,7 +406,7 @@ function mostrarHistorico() {
     moodHistory.slice().reverse().forEach((item, i) => {
         const indexOriginal = moodHistory.length - 1 - i;
         container.innerHTML += `
-            <div style="border: 1px solid #ccc; padding: 10px; margin: 5px 0;">
+            <div style="border: 1px solid #0056b3; padding: 10px; margin: 5px 0;">
                 <strong>${item.data}</strong><br>
                 Humor: ${item.humor}<br>
                 Nota: ${item.nota}<br>
