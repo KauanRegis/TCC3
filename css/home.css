@@ -297,7 +297,7 @@ footer {
 }
 .artigo-saude-mental:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    transform: translateY(-6px) scale(1.03);
+    transform: translateY(-6px) scale(1.01);
     border: 3px solid #2a8770;
     background-color: #f8fdf8;
 }
