@@ -46,7 +46,6 @@ O site é composto por várias páginas HTML, organizadas em uma estrutura hier�
     - **Quizzes**: Questionários sobre ansiedade, sono, estresse e depressão com feedback personalizado.
     - **Rotina**: Rotinas detalhadas de autocuidado para insônia, ansiedade, depressão e estresse.
     - **Diário Emocional**: Formulário para registrar humor e notas, com histórico salvo no localStorage.
-    - **Vídeos**: Incorporação de vídeos do YouTube sobre meditação e relaxamento.
     - **Dicas**: Geração aleatória de dicas de autocuidado.
     - **FAQ**: Perguntas frequentes sobre o projeto.
     - **Contato**: Informações de contato (e-mail).
