@@ -187,7 +187,7 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-/* Efeitos de Hover para inputs de texto */
+
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="email"]:hover,
@@ -197,7 +197,7 @@ input[type="date"]:hover {
     transition: all 0.3s ease;
 }
 
-/* Efeitos de Hover para a box de texto */
+
 .box-texto:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     transform: translateY(-6px) scale(1.03);
@@ -206,7 +206,7 @@ input[type="date"]:hover {
     transition: all 0.4s ease;
 }
 
-/* Efeitos de Hover para botões de submit */
+
 input[type="submit"]:hover {
     background-color: #2a8770;
     transform: translateY(-2px);
@@ -214,7 +214,7 @@ input[type="submit"]:hover {
     transition: all 0.3s ease;
 }
 
-/* Efeitos de Hover para links de navegação */
+
 nav a:hover {
     color: #ffffff;
     background-color: #2a8770;
@@ -223,7 +223,7 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-/* Animações adicionais */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -266,7 +266,7 @@ button:active::before {
     height: 300px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;

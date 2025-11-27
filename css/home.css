@@ -29,14 +29,14 @@ body {
     gap: 20px;
 }
 
-/* Typography */
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: #222;
     margin-bottom: 10px;
 }
 
-/* Buttons */
+
 button, .btn {
     background-color: #38bb9b;
     color: white;
@@ -51,7 +51,7 @@ button:hover, .btn:hover {
     background-color: #2e9b7f;
 }
 
-/* Links */
+
 a {
     color: #007BFF;
     text-decoration: none;
@@ -62,9 +62,7 @@ a:hover {
     color: #0056b3;
 }
 
-/* Animations */
 
-/* Fade-in animation */
 .fade-in {
     opacity: 0;
     animation: fadeInAnimation 1s forwards;
@@ -76,7 +74,7 @@ a:hover {
     }
 }
 
-/* Slide-in from left */
+
 .slide-in-left {
     opacity: 0;
     transform: translateX(-20px);
@@ -90,13 +88,13 @@ a:hover {
     }
 }
 
-/* Microinteraction for buttons */
+
 button:active, .btn:active {
     transform: scale(0.95);
     transition: transform 0.1s ease;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -175,7 +173,7 @@ section {
     color: #000000;
 }
 
-/* Ajuste de tamanho para seções específicas */
+
 #quizes,
 #diario,
 #rotina,
@@ -274,7 +272,7 @@ footer {
     height: auto;
 }
 
-/* Efeitos de Hover para inputs de texto */
+
 .login-form input[type="text"]:hover,
 .login-form input[type="password"]:hover {
     border: 2px solid #2a8770;
@@ -282,7 +280,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Efeitos de Hover para a box de texto - Destaque Ampliado */
+
 .box-texto:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     transform: translateY(-6px) scale(1.03);
@@ -291,7 +289,6 @@ footer {
     transition: all 0.4s ease;
 }
 
-/* Efeitos de Hover para artigos */
 .artigo-saude-mental {
     transition: all 0.4s ease;
 }
@@ -302,7 +299,7 @@ footer {
     background-color: #f8fdf8;
 }
 
-/* Efeitos de Hover para botões */
+
 button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover {
     background-color: #2a8770;
     transform: translateY(-2px) scale(1.05);
@@ -310,7 +307,7 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover
     transition: all 0.3s ease;
 }
 
-/* Animações adicionais */
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
@@ -355,7 +352,7 @@ button:active::before {
     height: 300px;
 }
 
-/* Header buttons */
+
 .header-button {
     padding: 10px 15px;
     background-color: #38bb9b;
@@ -373,7 +370,7 @@ button:active::before {
     background-color: #2e9b7f;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
