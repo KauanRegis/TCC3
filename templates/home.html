@@ -260,6 +260,12 @@
             </div>
 <button onclick="saveMood()" style="background-color: #66bb6a; color: white; border: none; border-radius: 8px; padding: 10px 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">Salvar Humor</button>
 
+            <button onclick="showChart()" style="background-color: #66bb6a; color: white; border: none; border-radius: 8px; padding: 10px 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">Evolução Emocional</button>
+            <div id="chartContainer" style="display: none; margin-top: 20px;">
+                <h3>Gráfico de Evolução Emocional</h3>
+                <canvas id="moodChart" width="400" height="200"></canvas>
+            </div>
+
             <div id="moodHistory" style="margin-top: 20px; color: #000000;"></div>
         </section>
 
@@ -339,6 +345,7 @@
         <p>&copy; 2025 Bem-Estar Jovem. Todos os direitos reservados.</p>
         <a href="#" class="top-link">Subir ao topo</a>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/home.js"></script>
 </body>
 </html>

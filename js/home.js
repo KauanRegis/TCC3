@@ -396,6 +396,7 @@ function saveMood() {
     document.getElementById("note").value = "";
     document.getElementById("mood").value = "feliz";
     mostrarHistorico();
+    showChart();
 }
 
 function mostrarHistorico() {
@@ -415,6 +416,7 @@ function mostrarHistorico() {
             </div>
         `;
     });
+    renderMoodChart();
 }
 
 function editarNota(index) {
@@ -430,6 +432,64 @@ function excluirNota(index) {
     moodHistory.splice(index, 1);
     localStorage.setItem("diarioEmocional", JSON.stringify(moodHistory));
     mostrarHistorico();
+}
+
+let moodChart; // Global variable to store the chart instance
+
+function renderMoodChart() {
+    const moodHistory = JSON.parse(localStorage.getItem("diarioEmocional")) || [];
+    const ctx = document.getElementById('moodChart').getContext('2d');
+
+    // Destroy existing chart if it exists
+    if (moodChart) {
+        moodChart.destroy();
+    }
+
+    const moodValues = {
+        'feliz': 5,
+        'animado': 4,
+        'neutro': 3,
+        'ansioso': 2,
+        'triste': 1
+    };
+
+    const labels = moodHistory.map(item => item.data.split(' ')[0]); // Extract date part
+    const data = moodHistory.map(item => moodValues[item.humor] || 3); // Default to neutro if unknown
+
+    moodChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Humor ao Longo do Tempo',
+                data: data,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 5,
+                    ticks: {
+                        stepSize: 1,
+                        callback: function(value) {
+                            const moods = {1: 'triste', 2: 'ansioso', 3: 'neutro', 4: 'animado', 5: 'feliz'};
+                            return moods[value] || value;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+function showChart() {
+    const container = document.getElementById('chartContainer');
+    container.style.display = 'block';
+    renderMoodChart(); // Ensure the chart is rendered with the latest data
 }
 
 window.onload = mostrarHistorico;
